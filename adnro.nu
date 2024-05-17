@@ -73,6 +73,7 @@ helix --grammar build
 wget https://gist.githubusercontent.com/elenakrittik/6e658b8b4b733818604447f7aea9aed9/raw/8476f0a89ef040a93a1df054a580afaf66234395/starship.toml -O ~/.config/starship.toml
 
 print "Setting up aliases"
+echo "alias cls = clear\n" | save --append $nu.config-path
 echo "alias hx = helix\n" | save --append $nu.config-path
 echo "alias gta = git add .\n" | save --append $nu.config-path
 echo "alias gcm = git commit -am\n" | save --append $nu.config-path
