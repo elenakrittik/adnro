@@ -1,0 +1,28 @@
+use-grammars = { only = ["css", "fish", "gdscript", "html", "javascript", "json", "markdown", "nu", "python", "rst", "rust", "toml", "tsx", "typescript", "yaml"] }
+
+# Rust
+
+[[language]]
+name = "rust"
+# Replace single-session RA with it's multiplexer.
+language-servers = ["ra-multiplex"]
+
+[language-server.ra-multiplex]
+command = "ra-multiplex"
+
+# Python
+
+[[language]]
+name = "python"
+language-servers = ["pyright-langserver", "ruff"]
+formatter = { command = "ruff", args = ["format", "-"] }
+auto-format = true
+
+[language-server.pyright-langserver]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {}
+
+[language-server.ruff]
+command = "ruff-lsp"
+config = { settings = { run = "onSave" } }

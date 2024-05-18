@@ -1,0 +1,8 @@
+theme = "rose_pine"
+
+[editor]
+true-color = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
