@@ -30,6 +30,7 @@ rustup component add rust-docs
 rustup component add rustfmt
 
 print "Installing Rust-based tools"
+# TODO: ensure ln is cross-platform
 ln --symbolic (rustup which "rust-analyzer") ~/.cargo/bin
 # TODO: different url for windoge
 curl -L --proto '=https' --tlsv1.2 -sSf "https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh" | bash
